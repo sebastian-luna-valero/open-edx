@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-test
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  namespace: openedx
+spec:
+  rules:   
+    - host: testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
+    - host: studio.testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
+    - host: preview.testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - testmylms.ddns.net
+        - studio.testmylms.ddns.net
+        - preview.testmylms.ddns.net
+      secretName: openedx

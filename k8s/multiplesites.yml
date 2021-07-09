@@ -1,0 +1,7 @@
+name: multiplesites
+version: 0.0.1
+patches:
+  openedx-lms-production-settings: |
+    ALLOWED_HOSTS.append("*")
+  openedx-cms-production-settings: |
+    ALLOWED_HOSTS.append("*")
