@@ -1,0 +1,5 @@
+name: studio
+version: 0.1.0
+patches:
+ cms-env-features: |
+    "STUDIO_REQUEST_EMAIL": "ucst@egi.eu"
