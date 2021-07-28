@@ -28,6 +28,28 @@ spec:
               serviceName: nginx
               servicePort: 80
             path: /
+    - host: ecommerce.testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
+    - host: discovery.testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
+    - host: mfe.testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
+  # This section is only required if TLS is to be enabled for the Ingress
   tls:
     - hosts:
         - testmylms.ddns.net
