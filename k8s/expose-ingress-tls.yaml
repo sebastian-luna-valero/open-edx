@@ -49,6 +49,13 @@ spec:
               serviceName: nginx
               servicePort: 80
             path: /
+    - host: minio.testmylms.ddns.net
+      http:
+        paths:
+          - backend:
+              serviceName: nginx
+              servicePort: 80
+            path: /
   # This section is only required if TLS is to be enabled for the Ingress
   tls:
     - hosts:
