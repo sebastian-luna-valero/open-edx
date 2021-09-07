@@ -4,6 +4,8 @@ metadata:
   name: ingress-test
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.org/client-max-body-size: "50m"
   namespace: openedx
 spec:
   rules:   
